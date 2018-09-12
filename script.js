@@ -1,7 +1,7 @@
-const navButton = document.getElementById("toggle-menu-btn");
-const buttonIcon = document.getElementById("button-icon");
+var navButton = document.getElementById("toggle-menu-btn");
+var buttonIcon = document.getElementById("button-icon");
 
-const toggleClassNavButton = () => {
+var toggleClassNavButton = function() {
   if (buttonIcon.classList.contains("fa-bars")){
     buttonIcon.classList.remove("fa-bars");
     buttonIcon.classList.add("fa-times");  
