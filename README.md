@@ -1,2 +1,2 @@
 # art-portfolio
-Art portfolio 
+Art portfolio with picture gallery 
