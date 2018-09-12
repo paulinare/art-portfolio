@@ -1,0 +1,122 @@
+body {
+  font-family: 'Open Sans', sans-serif;
+  width: 100vw; 
+}
+header {
+  width: 95vw; 
+  margin: auto; 
+} 
+
+#header-top {
+  position: fixed; 
+  background-color: white;  
+  z-index: 1000;   
+  width: 100vw; 
+  left: 0;
+  padding-left: 5vw;
+  top: 0;
+  height: 5em; 
+} 
+#toggle-menu-btn {
+  position: fixed;
+  color: black;
+  position: fixed; 
+  right: 4vw;
+  margin-top: -3.2em; 
+}
+
+.fas {
+  font-size: 1.5em;  
+}
+
+.fas:hover {
+  color: brown
+}
+
+#hidden-nav {  
+  width: 70vw;   
+  position: fixed;   
+  z-index: 100; 
+  left: -70vw; 
+  padding-top: 5em;     
+  height: 100vh;
+}   
+    
+#hidden-nav ul {
+  list-style: none; 
+}
+#hidden-nav li {
+  margin-top: 0.5em;
+}
+  
+#painting-container {  
+  position: relative;  
+  display: flex; 
+  margin: auto;
+  flex-wrap: wrap; 
+  width: 95vw;
+  padding-top: 5em; 
+  justify-content: space-between;
+  align-items: center;  
+}
+@keyframes show{    
+  from {margin-left: 2.5px;}
+  to {margin-left:70vw;}       
+}  
+
+@keyframes hide {
+  from {margin-left: 70vw;} 
+  to {margin-left: 2.5vw;}     
+}
+
+#painting-container div{
+  position: relative;
+  width: 29vw;
+  margin-bottom: 3.8vw;
+  background-color: blue; 
+  height: 29vw; 
+} 
+
+#p0 { 
+  color: red; 
+  background-image: url("https://mir-s3-cdn-cf.behance.net/project_modules/2800/ab66f861765279.5a79635c5ce47.jpg");
+  background-position: center;
+  background-size: cover; 
+}
+#p1 {
+  background-image: url("https://mir-s3-cdn-cf.behance.net/project_modules/2800/6ccb5061748023.5a78c5214e036.jpg"); 
+  background-position: center;
+  background-size: cover;
+} 
+
+#p2 {
+  
+}
+
+
+
+@media only screen and (min-width: 768px) {
+
+  #toggle-menu-btn {
+    display: none;  
+  }
+  
+  #hidden-nav {
+    width: 25vw;
+    left: 0vw;  
+  }
+  #painting-container {
+    position: relative;
+    float: right;
+    margin-right: 3.5vw;
+    width: 70vw;
+  }
+  #painting-container div {
+    width: 22vw;
+    height: 22vw; 
+    margin-bottom: 2vw;
+    
+  }
+  
+  
+}
