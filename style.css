@@ -1,6 +1,7 @@
 body {
   font-family: 'Open Sans', sans-serif;
   width: 100vw; 
+    position:relative; 
 }
 header {
   width: 95vw; 
@@ -10,7 +11,7 @@ header {
 #header-top {
   position: fixed; 
   background-color: white;  
-  z-index: 1000;   
+  z-index: 99999; 
   width: 100vw; 
   left: 0;
   padding-left: 5vw;
@@ -19,10 +20,17 @@ header {
 } 
 #toggle-menu-btn {
   position: fixed;
-  color: black;
-  position: fixed; 
+  color: black; 
   right: 4vw;
-  margin-top: -3.2em; 
+  margin-top: -4em; 
+  background: none;
+  color: inherit;
+  border: none;
+  padding: 10px;
+  font: inherit;
+  cursor: pointer;
+  outline: inherit;
+  z-index: 99999; 
 }
 
 .fas {
@@ -34,64 +42,79 @@ header {
 }
 
 #hidden-nav {  
-  width: 70vw;   
+  width: vw;     
   position: fixed;   
   z-index: 100; 
-  left: -70vw; 
   padding-top: 5em;     
-  height: 100vh;
+  height: 100vh; 
+  
 }   
     
 #hidden-nav ul {
   list-style: none; 
+  padding-left: 2vw; 
 }
 #hidden-nav li {
   margin-top: 0.5em;
 }
   
-#painting-container {  
-  position: relative;  
+#painting-container { 
+  position: relative; 
+  background-color: white; 
+  z-index: 10000;   
   display: flex; 
   margin: auto;
   flex-wrap: wrap; 
   width: 95vw;
-  padding-top: 5em; 
-  justify-content: space-between;
+  padding-top: 5em;    
+  justify-content: space-between; 
   align-items: center;  
 }
 @keyframes show{    
-  from {margin-left: 2.5px;}
-  to {margin-left:70vw;}       
+  from {left: 0px;} 
+  to {left:80vw;}       
 }  
 
 @keyframes hide {
-  from {margin-left: 70vw;} 
-  to {margin-left: 2.5vw;}     
+  from {left: 80vw;} 
+  to {left: 0vw;}       
 }
 
-#painting-container div{
+.painting {
   position: relative;
   width: 29vw;
   margin-bottom: 3.8vw;
-  background-color: blue; 
-  height: 29vw; 
+  height: 29vw;    
+  background-position: center;   
+  background-size: cover;
+  opacity: 1;
+ transition: opacity .15s ease-in-out; 
 } 
+
+
+
+.painting:hover { 
+  opacity: 0.8;
+}
+
 
 #p0 { 
   color: red; 
   background-image: url("https://mir-s3-cdn-cf.behance.net/project_modules/2800/ab66f861765279.5a79635c5ce47.jpg");
-  background-position: center;
-  background-size: cover; 
+
 }
 #p1 {
   background-image: url("https://mir-s3-cdn-cf.behance.net/project_modules/2800/6ccb5061748023.5a78c5214e036.jpg"); 
-  background-position: center;
-  background-size: cover;
 } 
 
 #p2 {
+    background-image: url("https://mir-s3-cdn-cf.behance.net/project_modules/max_3840/9adb9758818589.5a0aca49698c5.jpg"); 
+
+    
   
 }
+
+
 
 
 
@@ -100,23 +123,23 @@ header {
   #toggle-menu-btn {
     display: none;  
   }
-  
+   
   #hidden-nav {
-    width: 25vw;
-    left: 0vw;  
+    width: 20vw;
+  
   }
   #painting-container {
-    position: relative;
-    float: right;
-    margin-right: 3.5vw;
-    width: 70vw;
+    margin-right: 6vw; 
+    width: 70vw; 
+ 
   }
-  #painting-container div {
+  #painting-container a {
     width: 22vw;
     height: 22vw; 
     margin-bottom: 2vw;
     
   }
-  
+    
+
   
 }
